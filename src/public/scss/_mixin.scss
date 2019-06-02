@@ -1,0 +1,53 @@
+@mixin border-top-1px($color) {
+  position: relative;
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid $color;
+    content: ' ';
+  }
+}
+@mixin icon-img($url, $size) {
+  background: url($url + 'ic_launcher_small.png');
+  background-size: $size;
+  @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+    background: url($url + 'ic_launcher_middle.png');
+    background-size: $size;
+  }
+  @media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+    background: url($url + 'ic_launcher_big.png');
+    background-size: $size;
+  }
+}
+
+html {
+  font-size : 20px;
+}
+@media only screen and (min-width: 401px){
+  html {
+    font-size: 25px !important;
+  }
+}
+@media only screen and (min-width: 428px){
+  html {
+    font-size: 26.75px !important;
+  }
+}
+@media only screen and (min-width: 481px){
+  html {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (min-width: 569px){
+  html {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (min-width: 641px){
+  html {
+    font-size: 40px !important;
+  }
+}
